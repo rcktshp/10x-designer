@@ -1,0 +1,24 @@
+{
+  "name": "10xdesigner",
+  "version": "1.0.0",
+  "description": "AI design toolkit for the full product design lifecycle: prototype, wireframe, design brief, sprint, project card, competitive teardown, multi-persona crit, heuristic eval, and Design-to-Code (Figma bridge). Work with AI as a teammate, not a vending machine.",
+  "author": {
+    "name": "Diego Martins",
+    "url": "https://diegomartins.com"
+  },
+  "homepage": "https://github.com/rcktshp/10xdesigner",
+  "repository": "https://github.com/rcktshp/10xdesigner",
+  "license": "MIT",
+  "keywords": [
+    "design",
+    "prototyping",
+    "wireframe",
+    "design-brief",
+    "design-sprint",
+    "design-crit",
+    "heuristic-evaluation",
+    "figma",
+    "design-to-code",
+    "design-systems"
+  ]
+}

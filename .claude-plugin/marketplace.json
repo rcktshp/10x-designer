@@ -1,0 +1,29 @@
+{
+  "name": "10xdesigner",
+  "owner": {
+    "name": "Diego Martins",
+    "url": "https://diegomartins.com"
+  },
+  "plugins": [
+    {
+      "name": "10xdesigner",
+      "source": "./",
+      "description": "AI design toolkit for the full product design lifecycle: prototype, wireframe, design brief, sprint, project card, competitive teardown, multi-persona crit, heuristic eval, templates, and Design-to-Code (Figma bridge).",
+      "version": "1.0.0",
+      "author": {
+        "name": "Diego Martins",
+        "url": "https://diegomartins.com"
+      },
+      "license": "MIT",
+      "category": "design",
+      "keywords": [
+        "design",
+        "prototyping",
+        "wireframe",
+        "design-sprint",
+        "figma",
+        "design-systems"
+      ]
+    }
+  ]
+}
