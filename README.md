@@ -1,8 +1,6 @@
 # 10xdesigner
 
-An AI design toolkit for the full product design lifecycle — the open
-Claude Code plugin rebuild of the **10x-design** toolkit that its author
-originally built and shipped inside a 500+ designer organization.
+An AI design toolkit for the full product design lifecycle.
 
 **Created and developed by [Diego Martins](https://diegomartins.com).**
 
