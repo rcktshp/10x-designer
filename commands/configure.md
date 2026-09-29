@@ -3,8 +3,7 @@ description: Adapt 10xdesigner to your team — design system, crit personas, co
 argument-hint: [optional: what to set up or change]
 ---
 
-Read the 10xdesigner skill's `references/configure.md` (in this plugin's
-`skills/10xdesigner/` directory) and follow the Configure workflow for:
+Load the `10xdesigner` skill and read its `references/configure.md`, then follow the Configure workflow for:
 $ARGUMENTS
 
 If no argument was given: if `.10xdesigner/config.md` exists in the project,

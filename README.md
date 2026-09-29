@@ -27,7 +27,7 @@ flow`). Already know what you need? Call the workflow itself:
 | Teardown | `/10xdesigner:teardown` | Competitive analysis → steal / adapt / avoid |
 | Design Crit | `/10xdesigner:crit` | Multi-persona stakeholder pre-feedback |
 | Design Eval | `/10xdesigner:design-eval` | Nielsen scorecard + cognitive walkthrough + a11y |
-| Templates | `/10xdesigner:templates` | Pre-filled artifact templates (8 in the library) |
+| Templates | `/10xdesigner:templates` | Pre-filled artifact templates (9 in the library) |
 | Design-to-Code | `/10xdesigner:design-to-code` | Figma ⇄ code bridge and drift audit |
 
 Plain conversation works too — "create a project card in Figma for my Friday
@@ -74,15 +74,73 @@ The skill also triggers naturally without commands: "mock up a checkout flow",
 
 ## Install
 
+10xdesigner ships in one repo for three hosts. The skill (workflows, knowledge
+base, templates) is identical everywhere; only the entry points differ.
+
+**Claude Code**
+
 ```
 /plugin marketplace add rcktshp/10xdesigner
 /plugin install 10xdesigner
 ```
 
+You get the `/10xdesigner:*` slash commands, the skill, and the
+`design-critic` subagent.
+
+**GitHub Copilot CLI**
+
+```
+copilot plugin marketplace add rcktshp/10xdesigner
+copilot plugin install 10xdesigner@10xdesigner
+```
+
+You get the skill (triggers from plain conversation) and two custom agents:
+`10xdesigner`, the front door that asks where to start, and `design-critic`.
+Copilot CLI has no user-defined slash commands, so pick the agent
+(`/agent`, or `copilot --agent 10xdesigner`) or just describe the task.
+
+**OpenAI Codex**
+
+```
+codex plugin marketplace add rcktshp/10xdesigner
+codex plugin add 10xdesigner@10xdesigner
+```
+
+You get the skill: mention it as `$10xdesigner` or describe the task. Two
+optional extras, because Codex does not install them from a plugin:
+
+- Slash commands: `sh scripts/install-codex-prompts.sh` copies each
+  workflow into `~/.codex/prompts/` as `/prompts:10xdesigner-<name>`.
+- The `design-critic` agent: copy `com.openai.codex/agents/design-critic.toml`
+  to `~/.codex/agents/`.
+
+**Any other host** that reads Agent Skills can use `skills/10xdesigner`
+directly; the root `plugin.json` follows the Agent Plugins 1.0 standard.
+
 Or point straight at this directory from a local clone.
+
+### Staying up to date
+
+Releases are tagged `v<version>` and bump the `version` field in every
+manifest; that field is what each host compares, so a plain `git pull` on
+this repo is not an update. Hosts pull, nothing is pushed:
+
+- **Claude Code:** `claude plugin update 10xdesigner`, or turn on
+  **Enable auto-update** for this marketplace under `/plugin` →
+  Marketplaces and Claude Code refreshes it in the background.
+- **Copilot CLI:** `copilot plugin update 10xdesigner` (or `--all`), or
+  set `autoUpdate: true` on the marketplace entry in your user settings.
+- **Codex:** `codex plugin marketplace upgrade`, then re-add the plugin.
+  Re-run `scripts/install-codex-prompts.sh` if you installed the prompts.
 
 Optional: connect the [Figma MCP server](https://www.figma.com/) for full
 Design-to-Code fidelity; everything else runs with core tools only.
+
+## Learn more
+
+[`docs/10xdesigner-overview.md`](docs/10xdesigner-overview.md) is the full
+tour — every workflow, the knowledge layer, configuration, and install for
+each host — written to be shared with a team or in a post.
 
 ## Author & license
 

@@ -3,8 +3,7 @@ description: Build a rapid hi-fi interactive prototype (single-file HTML) for a 
 argument-hint: [what to prototype]
 ---
 
-Read the 10xdesigner skill's `references/prototype.md` (in this plugin's
-`skills/10xdesigner/` directory) and follow the Prototype workflow for:
+Load the `10xdesigner` skill and read its `references/prototype.md`, then follow the Prototype workflow for:
 $ARGUMENTS
 
 If no argument was given, ask what flow or idea to prototype and who will see it.

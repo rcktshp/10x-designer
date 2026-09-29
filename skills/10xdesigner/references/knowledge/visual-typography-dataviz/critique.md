@@ -19,7 +19,7 @@ Self-contained, scoreable checklist for an external design-review tool. Each ite
 - [ ] **No widows or orphans** (last line under ~7 chars; stranded line at column top/bottom). — Stranded text breaks flow and looks unfinished. _Severity: low._
 - [ ] **Lowercase running text is not tracked/letterspaced open.** — Open tracking on lowercase degrades word recognition. _Severity: med._
 - [ ] **Kerning handled for gappy pairs** (To, Ve, Wo, 7. etc.), especially at large sizes. — Uneven spacing draws the eye and degrades reading. _Severity: low._
-- [ ] **Extended-reading body size is within ~9ր�14pt** (adjusted for x-height). — Outside this band sustained reading suffers. _Severity: med._
+- [ ] **Extended-reading body size is within ~9–14pt** (adjusted for x-height). — Outside this band sustained reading suffers. _Severity: med._
 - [ ] **If justified, text "color" is even** (no rivers, no alternately loose/tight lines). — Erratic spacing implies false emphasis. _Severity: med._
 - [ ] **Spacing (word/line/letter) scales with line length** (longer = looser). — Keeps reading rhythm even. _Severity: med._
 - [ ] **Screen/web type is engineered for screen** (hinting, contrast, weight) below ~14px, not an auto-converted print font. — Poor small-size rendering hurts legibility. _Severity: med._

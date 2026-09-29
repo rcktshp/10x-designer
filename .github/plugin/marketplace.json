@@ -1,0 +1,19 @@
+{
+  "name": "10xdesigner",
+  "metadata": {
+    "description": "AI design toolkit for the full product design lifecycle: prototype, wireframe, brief, sprint, project card, teardown, crit, eval, templates, and Design-to-Code.",
+    "version": "1.1.0"
+  },
+  "owner": {
+    "name": "Diego Martins",
+    "url": "https://diegomartins.com"
+  },
+  "plugins": [
+    {
+      "name": "10xdesigner",
+      "source": "./",
+      "description": "AI design toolkit for the full product design lifecycle: prototype, wireframe, design brief, sprint, project card, competitive teardown, multi-persona crit, heuristic eval, templates, and Design-to-Code (Figma bridge). Work with AI as a teammate, not a vending machine.",
+      "version": "1.1.0"
+    }
+  ]
+}

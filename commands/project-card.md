@@ -3,8 +3,7 @@ description: Create a project card that frames a project for design review — c
 argument-hint: [project to card up]
 ---
 
-Read the 10xdesigner skill's `references/project-card.md` (in this plugin's
-`skills/10xdesigner/` directory) and follow the Project Card workflow for:
+Load the `10xdesigner` skill and read its `references/project-card.md`, then follow the Project Card workflow for:
 $ARGUMENTS
 
 If no argument was given, ask which project (or portfolio of projects) to card up.
