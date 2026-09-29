@@ -1,5 +1,5 @@
 ---
-description: Start from a ready-made design artifact template (brief, card, crit, eval, test kit, teardown, decision record, handoff note)
+description: Start from a ready-made design artifact template (brief, card, one-pager, crit, eval, test kit, teardown, decision record, handoff note)
 argument-hint: [which template, and for what project]
 ---
 

@@ -27,7 +27,7 @@ flow`). Already know what you need? Call the workflow itself:
 | Teardown | `/10xdesigner:teardown` | Competitive analysis → steal / adapt / avoid |
 | Design Crit | `/10xdesigner:crit` | Multi-persona stakeholder pre-feedback |
 | Design Eval | `/10xdesigner:design-eval` | Nielsen scorecard + cognitive walkthrough + a11y |
-| Templates | `/10xdesigner:templates` | Pre-filled artifact templates (8 in the library) |
+| Templates | `/10xdesigner:templates` | Pre-filled artifact templates (9 in the library) |
 | Design-to-Code | `/10xdesigner:design-to-code` | Figma ⇄ code bridge and drift audit |
 
 Plain conversation works too — "create a project card in Figma for my Friday

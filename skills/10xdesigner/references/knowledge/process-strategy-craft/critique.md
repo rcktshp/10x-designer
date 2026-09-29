@@ -1,22 +1,22 @@
-# Critique Checklist — process-strategy-craft  
-  
-Self-contained, scoreable checklist for an external design-review tool. Each item: **check** · _why it matters_ · **severity** (high/med/low). Deduplicated across many established UX sources; the more sources behind a check, the more load-bearing it is.  
-  
-Score each item: **pass / partial / fail / N/A**. Treat any failed *high*-severity item as a blocker.  
-  
----  
-  
-## 1. Goals, problem & rationale  
-  
+# Critique Checklist — process-strategy-craft
+
+Self-contained, scoreable checklist for an external design-review tool. Each item: **check** · _why it matters_ · **severity** (high/med/low). Deduplicated across many established UX sources; the more sources behind a check, the more load-bearing it is.
+
+Score each item: **pass / partial / fail / N/A**. Treat any failed *high*-severity item as a blocker.
+
+---
+
+## 1. Goals, problem & rationale
+
 - [ ] **Each significant decision ties to a stated problem AND a measurable goal/KPI.** _Untethered decisions are pure opinion and can't be defended or evaluated._ **high**
 - [ ] **The design answers all three: what problem it solves, how it affects the user, why it's better than the alternative.** _These are the basis of every defensible response._ **high**
 - [ ] **Every notable element can answer "Why did you do that?" with a goal/research reason — not "I like it" / "I can change it."** _Subjective, ungrounded choices are the #1 cause of derailment._ **high**
 - [ ] **The rationale leads with goals/benefits, not a feature list or "real-estate tour."** _Goal-led rationale proves intent and resists arbitrary remodeling._ **high**
 - [ ] **The underlying user *goal* (not just the feature/task) is served and aligned with the business goal.** _Feature-complete products that miss the real goal fail._ **high**
 - [ ] **Critique/response vocabulary avoids "like/don't like," "from a design perspective," "you're wrong," and jargon.** _This language is subjective, defensive, or alienating._ **med**
-  
-## 2. Research, validation & metrics  
-  
+
+## 2. Research, validation & metrics
+
 - [ ] **The design is grounded in the team's own research/discovery, not intuition, a bake-off, or handed-over research.** _Research is the keystone; everything downstream is guesswork without it._ **high**
 - [ ] **There is evidence the team observed real users doing real tasks (not just asked opinions / ran a focus group / public concept vote).** _Say ≠ do; opinion-based design fails (the Aeron chair, "The Homer")._ **high**
 - [ ] **Feature requests were interrogated for the underlying problem rather than built literally.** _Users name a familiar solution, not their real need._ **high**
@@ -25,9 +25,9 @@ Score each item: **pass / partial / fail / N/A**. Treat any failed *high*-severi
 - [ ] **The work is framed as a falsifiable hypothesis with a baseline captured before the experiment, tying ONE feature to ONE outcome.** _No baseline = uninterpretable results; bundling kills attribution._ **high**
 - [ ] **Success metrics are actionable (transactions, conversion, retention/task-success) and measurable, not vanity (page views, raw signups, hits/likes).** _Vanity metrics hide whether the value prop actually works._ **med**
 - [ ] **A/B/quantitative results are statistically significant, tested against a concurrent control, with combined winners re-tested.** _Insignificant results reverse; uncontrolled tests and A+B≠C mislead._ **high**
-  
-## 3. Scope, simplicity & hierarchy  
-  
+
+## 3. Scope, simplicity & hierarchy
+
 - [ ] **Could any feature/element be removed and the product still serve its core job? (Is it as simple as possible — nothing left to take away?)** _Half a great product beats a half-assed whole; clutter dilutes the path to the goal._ **high**
 - [ ] **There is exactly one clearly dominant primary action per view (passes the squint/"wall" test — obvious from 6–7 ft, no explanatory arrows).** _Competing dominant elements destroy hierarchy and confuse next-step._ **high**
 - [ ] **Visual hierarchy orders content by user need (a "receiving line"); no "make it bigger" arms race (shrink neighbors instead).** _Flat or ad-dominated hierarchy means users miss what matters._ **high**
@@ -36,18 +36,18 @@ Score each item: **pass / partial / fail / N/A**. Treat any failed *high*-severi
 - [ ] **Differentiation comes from experience quality / a unique mash-up, not feature parity with competitors (no Frankenproduct).** _Matching feature matrices bloats and ignores real needs ("Death by Competitive Analysis")._ **med**
 - [ ] **You can state ONE key experience (or a tight set) that defines the value innovation — not 6 "key" features.** _A feature list masquerading as differentiation signals scope bloat._ **high**
 - [ ] **Decorative/non-informational elements (3D chart effects, brand-driven animations) have been cut.** _Chartjunk distorts data; ego features quietly cost conversion._ **med**
-  
-## 4. Fidelity, content & screen states  
-  
+
+## 4. Fidelity, content & screen states
+
 - [ ] **The artifact uses real, representative content — not Lorem ipsum / filler.** _Dummy text hides field-width, table-expansion, and meaning problems; design IS its content._ **med**
 - [ ] **A deliberate blank/first-run (empty) state is designed, not just a data-filled mockup.** _First impression sets expectations; users judge worth when nothing is there._ **high**
 - [ ] **Error / empty / abandon / recovery / cross-device-return states are designed, with human inline error copy at the point of the problem (not system-language at the top of the form).** _Breakdowns are inevitable and define trust; users break forms and arrive sideways._ **high**
 - [ ] **Artifact fidelity matches the question being asked and its audience (low-fi/grayscale for concept; not pixel-perfect before testing).** _Premature prettification biases testers toward politeness and surface comments, and sinks-cost the design._ **med**
 - [ ] **A wireframe is free of premature visual design (color, real type, exact spacing/pixels) and ranks content areas by priority.** _Priority is the wireframe's core output; styling derails review into aesthetics._ **med**
 - [ ] **The artifact is free of distracting placeholder content, misalignment, bad icons, and tool artifacts before review.** _Distractions hijack feedback away from real issues._ **med**
-  
-## 5. Affordance, feedback & interaction craft  
-  
+
+## 5. Affordance, feedback & interaction craft
+
 - [ ] **Every interactive element is visually distinguishable as clickable without hovering (and from ads).** _Hover-only affordance and banner-blindness hide functionality._ **high**
 - [ ] **Every consequential action produces immediate, visible feedback (state change, spinner/progress, confirmation); none fail silently.** _Missing feedback causes doubt, duplicate submits, distrust, or abandonment._ **high**
 - [ ] **Each primary CTA is grouped with the exact info needed to decide (price/name/image); errors sit beside their field (the "doorbell sign" rule).** _Separation kills conversion; far-flung errors get missed._ **high**
@@ -59,9 +59,9 @@ Score each item: **pass / partial / fail / N/A**. Treat any failed *high*-severi
 - [ ] **Markup is semantically correct with ARIA roles/labels; related label/value pairs are announced together.** _Assistive tech relies on semantic structure and exposed relationships._ **high**
 - [ ] **Body/UI text has high contrast (no gray-on-gray "museum piece"), a comfortably legible size, and ~1.5× line-height; type is scannable and prioritized.** _Legibility is the precondition for interaction ("can you read the damn site?")._ **high**
 - [ ] **Familiar conventions/affordances users bring from comparable tools are preserved; common patterns (login/checkout/comments) are adopted then verified in context.** _Unexpected breaks from familiarity plunge users into difficulty; novelty must serve the goal._ **med**
-  
-## 6. Engagement, trust & the whole arc  
-  
+
+## 6. Engagement, trust & the whole arc
+
 - [ ] **The design keeps the user's focus on their goal (engagement / "fourth wall"), minimizing friction between task and tool.** _Anything that breaks engagement both causes and signals difficulty._ **high**
 - [ ] **The experience has a clear value moment (climax) where the user experiences value, and ends with falling action / a "home better than before" — not a bare confirmation or cliffhanger.** _Peak-end rule; flat experiences aren't remembered or repeated; cliffhangers cause non-return._ **high**
 - [ ] **Primary CTAs and landing copy name the user's value/action (their goal), showing people like them achieving it — not "Sign up" / what the product *is*.** _Users must see themselves as the hero or they bounce (FitCounter rewrite +40%); landing must convey value in ~30s._ **high**
@@ -71,9 +71,9 @@ Score each item: **pass / partial / fail / N/A**. Treat any failed *high*-severi
 - [ ] **The page passes the 5-second / orientation test: a fresh user can tell what it is, where they are, and what to do within ~1–2 seconds.** _Distracted users grasp only the dominant element; orientation drives task success._ **high**
 - [ ] **No prominent action leads to a dead end or misdirects past a required step.** _Tempting dead-end affordances create stuck-states and support load (removing one raised confirmations 63%→79%)._ **high**
 - [ ] **Performance is acceptable AND consistent, with graceful handling/feedback for unavoidable waits.** _Lag and variable waits erode engagement and trust._ **med**
-  
-## 7. Story, persona & artifact quality  
-  
+
+## 7. Story, persona & artifact quality
+
 - [ ] **Each persona/scenario is a named, specific character with a motivation and a real activity (not demographics/percentages or stereotype caricatures); every trait maps to a design implication.** _Statistics don't drive design; only actionable, behavior-led personas do._ **high**
 - [ ] **Stories explain *why* (goals/motivation/emotion), are honest/authentic/accurate to research, hold plausibility at every step, and triangulate with data.** _Without the why it's a use case; one implausible leap loses the audience; a lone anecdote isn't evidence._ **high**
 - [ ] **The artifact is embedded in a narrative deliverable that brings a stranger up to speed (state, theme, decisions, issues) and informs the next decision — not delivered raw.** _Context-free artifacts get misinterpreted; "shared documents aren't shared understanding."_ **high**
@@ -81,9 +81,9 @@ Score each item: **pass / partial / fail / N/A**. Treat any failed *high*-severi
 - [ ] **Design principles are specific enough to eliminate more ideas than they keep — none could equally describe a competitor (no "fun," "easy to use," "user-friendly").** _Generic principles can't filter decisions or create differentiation._ **med**
 - [ ] **Rejected alternatives were explored and kept available to show (evidence of divergence).** _Comparison proves intentionality and prevents stakeholders proposing worse options; first ideas are rarely best._ **med**
 - [ ] **Research findings were translated into a form that changes decisions (story/poster/video), not a 50-page report nobody reads.** _Research is worthless until it changes a decision._ **med**
-  
-## 8. Critique, decisions & process  
-  
+
+## 8. Critique, decisions & process
+
 - [ ] **Feedback being acted on is critique (element → objective → why), not bare reaction or prescriptive direction; analysis is kept separate from problem-solving.** _Only critique improves a design; mode-switching scatters the group._ **high**
 - [ ] **The product's objectives (goals, principles, personas, scenarios) are explicitly defined, shared, and agreed — a common foundation read at the start of each session.** _No shared foundation = fragmented, preference-driven feedback._ **high**
 - [ ] **Goals are measurable outcomes, not binary/output ("add a remember-me feature").** _Unmeasurable/output goals can't anchor critique or prove value._ **med**
@@ -93,9 +93,9 @@ Score each item: **pass / partial / fail / N/A**. Treat any failed *high*-severi
 - [ ] **Decisions are documented with the *why* (not just the what), with a recap sent within an hour or a day.** _Rationale prevents re-litigating; fast recap prevents reversal/drift._ **med**
 - [ ] **Design and engineering collaborate continuously (no waterfall handoff / specs thrown over the wall); the valuable-usable-feasible sweet spot was found by a cross-functional triad.** _Handoffs bake in mistakes and kill the design in transit._ **med**
 - [ ] **Every open item has an owner and a next action (notes are actionable).** _Unowned ideas don't progress and clutter follow-up._ **med**
-  
-## 9. Scope slicing, sustainability & governance  
-  
+
+## 9. Scope slicing, sustainability & governance
+
 - [ ] **Features are organized as a left-to-right user-journey story map (narratable), not by functional module; the happy path is designed before edge cases.** _Module-centric structure resists coherent release and hides the experience; experiences are linear._ **high**
 - [ ] **Any "MVP" is limited (does one thing well) not crappy (many things badly); "minimum" is defined relative to users' real needs and a target outcome.** _A "crappiest viable" product yields negative outcomes and false negatives._ **high**
 - [ ] **Each release slice is labeled with a specific target outcome, and big work is sliced into thin end-to-end "cupcakes" with technically risky bits scheduled first.** _Outcomes are the only valid basis for "done enough"; horizontal layers defer risk and feedback to the end._ **high**
@@ -107,14 +107,14 @@ Score each item: **pass / partial / fail / N/A**. Treat any failed *high*-severi
 - [ ] **Repeated UI elements are drawn from a documented pattern library on a consistent baseline grid, not re-styled ad hoc.** _Prevents drift, CSS bloat, and inconsistency (consolidation cut ~120k of CSS)._ **high**
 - [ ] **Custom controls aren't built where a standard one suffices (custom date picker, scroll-jacking).** _Rolling your own adds build/maintenance cost and breaks accessibility/portability._ **med**
 - [ ] **For two-sided markets, each side has a validated persona and UX; the business model (channels/revenue/cost) is validated alongside the UX.** _One-sided design causes chicken-and-egg failure; a loved UX on an unsustainable model still fails._ **med**
-  
----  
-  
-### Severity tally (for weighting an aggregate score)  
-- **High:** ~45 checks — failing any one is a likely blocker for shipping.  
-- **Med:** ~22 checks — degrade quality/defensibility; fix before broad release.  
-- **Low:** few — polish/maturity signals.  
-  
-### Notes for the review tool  
-- Many checks are *process* checks (research done, stakeholders aligned, hypothesis framed). When reviewing a static artifact with no process context, mark these **N/A** rather than fail, and flag them as "unverifiable from artifact alone."  
-- Two documented cluster tensions affect scoring: **(a) consistency vs. context** — enforce consistency by default for shared/structural patterns but allow deliberate, justified per-context exceptions; **(b) friction-reduction vs. meaningful friction** — fewer steps is not automatically better if the removed steps were building value (see `principles.md` #34, and the story-arc heuristics).  
+
+---
+
+### Severity tally (for weighting an aggregate score)
+- **High:** ~45 checks — failing any one is a likely blocker for shipping.
+- **Med:** ~22 checks — degrade quality/defensibility; fix before broad release.
+- **Low:** few — polish/maturity signals.
+
+### Notes for the review tool
+- Many checks are *process* checks (research done, stakeholders aligned, hypothesis framed). When reviewing a static artifact with no process context, mark these **N/A** rather than fail, and flag them as "unverifiable from artifact alone."
+- Two documented cluster tensions affect scoring: **(a) consistency vs. context** — enforce consistency by default for shared/structural patterns but allow deliberate, justified per-context exceptions; **(b) friction-reduction vs. meaningful friction** — fewer steps is not automatically better if the removed steps were building value (see `principles.md` #34, and the story-arc heuristics).

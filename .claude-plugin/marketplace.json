@@ -1,5 +1,6 @@
 {
   "name": "10xdesigner",
+  "description": "AI design toolkit for the full product design lifecycle: prototype, wireframe, brief, sprint, project card, teardown, crit, eval, templates, and Design-to-Code.",
   "owner": {
     "name": "Diego Martins",
     "url": "https://diegomartins.com"
