@@ -32,5 +32,7 @@ are UTF-8 with no trailing whitespace.
   `.claude-plugin/marketplace.json`, `plugin.json`, `.codex-plugin/plugin.json`
   and the entry in `.github/plugin/marketplace.json`). Hosts detect updates
   by comparing that field, so a change without a bump never reaches
-  installed users. Patch for fixes, minor for new workflows or hosts.
+  installed users. The project is in alpha: versions are `0.x.y-alpha`
+  until the 1.0 release. Patch for fixes, minor for new workflows, hosts,
+  or anything that changes a command name or the config layout.
 - A git tag `v<version>` on the merge commit in `main`.
