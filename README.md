@@ -119,8 +119,28 @@ directly; the root `plugin.json` follows the Agent Plugins 1.0 standard.
 
 Or point straight at this directory from a local clone.
 
+### Staying up to date
+
+Releases are tagged `v<version>` and bump the `version` field in every
+manifest; that field is what each host compares, so a plain `git pull` on
+this repo is not an update. Hosts pull, nothing is pushed:
+
+- **Claude Code:** `claude plugin update 10xdesigner`, or turn on
+  **Enable auto-update** for this marketplace under `/plugin` →
+  Marketplaces and Claude Code refreshes it in the background.
+- **Copilot CLI:** `copilot plugin update 10xdesigner` (or `--all`), or
+  set `autoUpdate: true` on the marketplace entry in your user settings.
+- **Codex:** `codex plugin marketplace upgrade`, then re-add the plugin.
+  Re-run `scripts/install-codex-prompts.sh` if you installed the prompts.
+
 Optional: connect the [Figma MCP server](https://www.figma.com/) for full
 Design-to-Code fidelity; everything else runs with core tools only.
+
+## Learn more
+
+[`docs/10xdesigner-overview.md`](docs/10xdesigner-overview.md) is the full
+tour — every workflow, the knowledge layer, configuration, and install for
+each host — written to be shared with a team or in a post.
 
 ## Author & license
 

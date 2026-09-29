@@ -19,6 +19,17 @@ comes from the `10xdesigner` skill.
   `.github/plugin/marketplace.json`, `.agents/plugins/marketplace.json`.
 
 When editing: keep the skill as the single source of truth and keep the
-per-platform wrappers thin. Bump `version` in all four manifests together.
-Validate with `claude plugin validate .`. Files are UTF-8 with no trailing
-whitespace.
+per-platform wrappers thin. Validate with `claude plugin validate .`. Files
+are UTF-8 with no trailing whitespace.
+
+## Every change ships with
+
+- A README update when anything user-visible changed: a workflow, a
+  template, an install step, a host. `docs/10xdesigner-overview.md` is the
+  long-form tour and needs the same edit.
+- A version bump in all four manifests (`.claude-plugin/plugin.json`,
+  `.claude-plugin/marketplace.json`, `plugin.json`, `.codex-plugin/plugin.json`
+  and the entry in `.github/plugin/marketplace.json`). Hosts detect updates
+  by comparing that field, so a change without a bump never reaches
+  installed users. Patch for fixes, minor for new workflows or hosts.
+- A git tag `v<version>` on the merge commit in `main`.
