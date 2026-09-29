@@ -28,7 +28,7 @@ link the brief instead of inlining it.
 3. **Create the card in Figma.** Load the `figma-use` skill first (mandatory
    before `use_figma`), then build the card in the file the designer names —
    or a new file if none exists. Check the Figma templates registry in
-   `.10x-designer/config.md` for a `project-card` template first (instantiate
+   the config (either layer) for a `project-card` template first (instantiate
    flow in `templates.md`); duplicate and fill it when registered. Only
    build from scratch when nothing exists. Layout for scratch builds (matches the
    canonical card):

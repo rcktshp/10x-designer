@@ -234,8 +234,17 @@ proprietary. Configuration lives in *your* project, not in the plugin, so
 you never fork it.
 
 `/10x-designer:configure` (or "configure 10x-designer for my team") writes
-`.10x-designer/config.md` into your repo. Commit it and the whole team
-shares it. It captures:
+a `config.md` at one of two layers:
+
+- **Project:** `.10x-designer/config.md` in the repo. Commit it and
+  everyone who clones the repo shares it.
+- **Shared:** `~/.10x-designer/config.md`, or the directory named by
+  `$TENX_DESIGNER_HOME`. Distributed like dotfiles, it applies to every
+  project a person opens.
+
+Project layers on top of shared, section by section: a section the project
+defines wins, an omitted one is inherited, and per-workflow notes and Figma
+template rows merge. The config captures:
 
 - **Design system:** name, where tokens and components live in code and in
   Figma, available MCP servers.
@@ -246,14 +255,49 @@ shares it. It captures:
 - **Per-workflow notes:** teach any workflow team-specific behavior ("our
   evals also check motion guidelines") without editing the plugin.
 
-Drop house versions of any template into `.10x-designer/templates/` and they
-override the defaults. Share a Figma template link once ("this is our crit
-template") and it's registered; from then on, workflows that build that
-artifact in Figma duplicate and fill your template.
+Drop house versions of any template into a `templates/` folder at either
+layer and they override the defaults. Share a Figma template link once
+("this is our crit template") and it's registered; from then on, workflows
+that build that artifact in Figma duplicate and fill your template.
 
-Precedence, highest first: your request > your templates > your config >
-plugin defaults. Config never removes a capability; it re-skins and
-re-anchors.
+Precedence, highest first: your request > project templates > shared
+templates > project config > shared config > plugin defaults. Config never
+removes a capability; it re-skins and re-anchors.
+
+### Rolling out to a team or enterprise
+
+Two problems, solved separately: getting the plugin onto every machine,
+and making it speak the company's language. The process that scales past
+one repo:
+
+1. **Pilot with one team, one repo.** Install the plugin, run configure,
+   and choose "point me at your docs": the design-system README, design
+   principles, brand guide, and review-process page. Correct the draft
+   (real stakeholder roles, internal names for a brief or card, where
+   artifacts get filed). Run two or three workflows on live work and add
+   per-workflow notes for whatever keeps getting corrected. Register the
+   team's Figma templates once.
+2. **Split the config into its two layers.** What is true company-wide,
+   such as the design system, brand voice, accessibility bar, default crit
+   panel, and naming, moves to the shared layer, kept in a small
+   "design-config" repository with an owner (design ops or a staff
+   designer) and changed by pull request. Each product repo keeps only its
+   product, metrics, stakeholders, and product-specific notes in
+   `.10x-designer/`.
+3. **Distribute the shared layer** the way the company already distributes
+   dotfiles: a setup script that clones the design-config repo and sets
+   `TENX_DESIGNER_HOME`, a dotfiles repo, or a device-management profile
+   that drops it into `~/.10x-designer/`.
+4. **Distribute the plugin per host.** Claude Code: `enabledPlugins` and
+   the marketplace in each repo's committed `.claude/settings.json`, or
+   managed settings and organization plugin sync for everyone at once.
+   Copilot: enterprise-managed plugins, or each person adds the
+   marketplace. Codex: each person adds the marketplace, usually via the
+   same setup script. Pin the version where the host allows it so upgrades
+   are deliberate.
+5. **Route improvements two ways.** Company-specific behavior goes into the
+   shared config. Anything that would help every company goes upstream as
+   a pull request.
 
 ---
 

@@ -37,12 +37,25 @@ review" triggers the right workflow without any command.
 
 The plugin is deliberately generic — no company branding, nothing
 proprietary. `/10x-designer:configure` adapts it to your team without forking
-anything: it writes `.10x-designer/config.md` into *your* project (commit it
-so the team shares it) with your design system, real crit personas, naming
-conventions, writing voice, and per-workflow notes that teach any workflow
-team-specific behavior. Drop house versions of any artifact template into
-`.10x-designer/templates/` and they override the plugin's defaults.
-Precedence: your request > your templates > your config > plugin defaults.
+anything: it writes a `config.md` with your design system, real crit
+personas, naming conventions, writing voice, and per-workflow notes that
+teach any workflow team-specific behavior. Drop house versions of any
+artifact template into a `templates/` folder beside it and they override
+the plugin's defaults.
+
+Config has two layers, so it scales from one repo to a whole company:
+
+- **Project:** `.10x-designer/` in the repo, committed, for everyone who
+  clones it.
+- **Shared:** `~/.10x-designer/` (or the directory in `$TENX_DESIGNER_HOME`),
+  distributed like dotfiles, for every project a person opens.
+
+Project layers on top of shared section by section, so a company keeps the
+design system, brand voice, and default crit panel in the shared layer and
+each product repo adds only its product, metrics, and stakeholders.
+Precedence: your request > project templates > shared templates > project
+config > shared config > plugin defaults. The rollout process for a team or
+enterprise is in the [overview](docs/10x-designer-overview.md#rolling-out-to-a-team-or-enterprise).
 
 Figma templates work the same way: share your team's crit page, review
 deck, or card template link once ("this is our crit template") and it's

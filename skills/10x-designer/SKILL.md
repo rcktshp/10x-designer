@@ -90,15 +90,27 @@ Ambiguity rules of thumb:
 
 These hold across every workflow:
 
-- **Load the team config first.** If `.10x-designer/config.md` exists in the
-  project, read it before running any workflow: it re-anchors the design
-  system, crit personas, naming conventions, writing voice, and carries
-  per-workflow notes to fold into the process. Team files in
-  `.10x-designer/templates/` override the plugin's templates of the same
-  name. Precedence: current request > team templates > team config > plugin
-  defaults. No config? Generic defaults apply — and if the workflow's output
-  would clearly benefit from team context (a crit with generic personas, a
-  card without a logo), mention `configure` once at the end, not more.
+- **Load the team config first.** Config lives in two layers, and both are
+  read before any workflow runs:
+  - **Shared** (a whole team or company): `~/.10x-designer/config.md`, or
+    the directory named by the `TENX_DESIGNER_HOME` environment variable
+    when set. Distributed like dotfiles, so every project a person opens
+    inherits it.
+  - **Project**: `.10x-designer/config.md` in the project root, committed
+    to that repo.
+  Project layers on top of shared, section by section: a section the
+  project config defines replaces the shared one; a section it omits is
+  inherited; per-workflow notes and Figma template rows merge, project
+  winning on a name collision. Together they re-anchor the design system,
+  crit personas, naming conventions, writing voice, and per-workflow notes
+  to fold into the process. Templates resolve the same way: a file in the
+  project's `.10x-designer/templates/` beats one in the shared
+  `templates/`, which beats the plugin's. Precedence: current request >
+  project templates > shared templates > project config > shared config >
+  plugin defaults. No config at either layer? Generic defaults apply — and
+  if the workflow's output would clearly benefit from team context (a crit
+  with generic personas, a card without a logo), mention `configure` once
+  at the end, not more.
 - **Ground judgments in the knowledge layer.** `references/knowledge/`
   holds a synthesized UX knowledge base across 14 clusters (core principles,
   foundational named heuristics, interaction patterns, visual/typography,

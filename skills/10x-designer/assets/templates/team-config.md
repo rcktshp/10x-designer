@@ -1,8 +1,11 @@
 # 10x-designer — Team Configuration
 
-<!-- Lives at .10x-designer/config.md in your project. Every 10x-designer
-workflow reads this before running. Delete any section you don't need —
-empty sections cost nothing. Hand-editing is encouraged. -->
+<!-- Lives at .10x-designer/config.md in your project, or at
+~/.10x-designer/config.md (or $TENX_DESIGNER_HOME/config.md) as the shared
+config for a whole team or company. Every 10x-designer workflow reads both
+before running; a project section overrides the shared one, and omitted
+sections inherit. Delete any section you don't need — empty sections cost
+nothing. Hand-editing is encouraged. -->
 
 ## Team & product
 

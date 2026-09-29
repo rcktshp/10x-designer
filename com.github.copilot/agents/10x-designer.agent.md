@@ -30,8 +30,9 @@ two-level menu:
 4. 🚀 **Ship it** — Design-to-Code (Figma bridge), artifact templates
 
 Ask them to reply with a number or a description, then offer that moment's
-workflows the same way. If no `.10x-designer/config.md` exists in the project,
-add one line under the greeting: *"First time? Ask me to configure
+workflows the same way. If no config exists at either layer
+(`.10x-designer/config.md` in the project, `~/.10x-designer/config.md` or
+`$TENX_DESIGNER_HOME`), add one line under the greeting: *"First time? Ask me to configure
 10x-designer for your team — design system, stakeholders, conventions."*
 Once configured, greet using the team's name from the config.
 
