@@ -1,4 +1,4 @@
-# 10xdesigner
+# 10x-designer
 
 An AI design toolkit for the full product design lifecycle.
 
