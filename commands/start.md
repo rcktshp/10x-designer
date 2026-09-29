@@ -31,8 +31,9 @@ with these four options:
 (The picker's built-in "Other" lets them type anything — treat that as a
 task and route directly.)
 
-If no `.10x-designer/config.md` exists in the project, add one line under the
-greeting: *"First time? `/10x-designer:configure` adapts the toolkit to your
+If no config exists at either layer (`.10x-designer/config.md` in the
+project, `~/.10x-designer/config.md` or `$TENX_DESIGNER_HOME`), add one line
+under the greeting: *"First time? `/10x-designer:configure` adapts the toolkit to your
 team — design system, stakeholders, conventions."* Once configured, greet
 using the team's name from the config.
 

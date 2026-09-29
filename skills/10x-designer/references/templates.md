@@ -6,7 +6,10 @@ how one designer's good format becomes the whole team's default.
 
 ## Process
 
-1. **Match the ask to a template.** The library lives in `../assets/templates/`:
+1. **Match the ask to a template.** The library lives in `../assets/templates/`.
+   A team file of the same name wins: the project's `.10x-designer/templates/`
+   first, then the shared layer's `templates/` (`~/.10x-designer/` or
+   `$TENX_DESIGNER_HOME`), then the plugin's.
 
    | Template | File | Use when |
    | --- | --- | --- |
@@ -41,12 +44,14 @@ deck, a card frame. This module manages that registry so "create a crit page
 in my Figma" lands on *their* template, not a generic build.
 
 **Register.** When someone shares a Figma template ("this is our crit
-template"), add a row to the **Figma templates** table in
-`.10x-designer/config.md`: template name, the file + node link, and fill
-notes (which layers or sections receive content — read the node's structure
-via the Figma MCP and draft the fill notes yourself, then confirm). No
-config file yet? Create one with just that section — registering a template
-is a fine first configuration.
+template"), add a row to the **Figma templates** table in the config —
+the project's `.10x-designer/config.md`, or the shared layer's `config.md`
+when the template is company-wide (ask if unclear): template name, the
+file + node link, and fill notes (which layers or sections receive content —
+read the node's structure via the Figma MCP and draft the fill notes
+yourself, then confirm). No config file yet? Create one with just that
+section — registering a template is a fine first configuration. When both
+layers register the same name, the project row wins.
 
 **Instantiate.** When a workflow needs to create an artifact in Figma:
 1. Check the registry for a matching template. Match by artifact, not exact
