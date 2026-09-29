@@ -11,6 +11,8 @@ It is written entirely in Markdown. There is no server, no account, and
 nothing to build. Install it, ask *"where should we start?"*, and go.
 
 - Repo: <https://github.com/rcktshp/10x-designer>
+- Status: alpha (`0.x`). Working and in daily use; command names, config
+  layout, and host wrappers may change before 1.0.
 - License: MIT
 - Author: [Diego Martins](https://diegomartins.com)
 

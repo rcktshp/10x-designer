@@ -2,6 +2,11 @@
 
 An AI design toolkit for the full product design lifecycle.
 
+**Status: alpha** (`0.x`). Everything works and is in daily use, but command
+names, the config layout, and the host wrappers may still change before
+1.0. Pin a version if that matters to you, and expect release notes to
+call out breaking changes.
+
 **Created and developed by [Diego Martins](https://diegomartins.com).**
 
 Built on one belief: **AI is a teammate, not a vending machine.** Every
@@ -143,7 +148,8 @@ Or point straight at this directory from a local clone.
 
 Releases are tagged `v<version>` and bump the `version` field in every
 manifest; that field is what each host compares, so a plain `git pull` on
-this repo is not an update. Hosts pull, nothing is pushed:
+this repo is not an update. Versions stay `0.x.y-alpha` until the 1.0
+release. Hosts pull, nothing is pushed:
 
 - **Claude Code:** `claude plugin update 10x-designer`, or turn on
   **Enable auto-update** for this marketplace under `/plugin` →
