@@ -1,6 +1,6 @@
-# 10xdesigner — Team Configuration
+# 10x-designer — Team Configuration
 
-<!-- Lives at .10xdesigner/config.md in your project. Every 10xdesigner
+<!-- Lives at .10x-designer/config.md in your project. Every 10x-designer
 workflow reads this before running. Delete any section you don't need —
 empty sections cost nothing. Hand-editing is encouraged. -->
 

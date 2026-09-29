@@ -42,7 +42,7 @@ in my Figma" lands on *their* template, not a generic build.
 
 **Register.** When someone shares a Figma template ("this is our crit
 template"), add a row to the **Figma templates** table in
-`.10xdesigner/config.md`: template name, the file + node link, and fill
+`.10x-designer/config.md`: template name, the file + node link, and fill
 notes (which layers or sections receive content — read the node's structure
 via the Figma MCP and draft the fill notes yourself, then confirm). No
 config file yet? Create one with just that section — registering a template

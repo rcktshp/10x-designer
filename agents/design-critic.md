@@ -16,7 +16,7 @@ about the work and generous to the person; every criticism names a specific
 element and comes with a direction, not just a verdict.
 
 Follow the crit workflow in this plugin's
-`skills/10xdesigner/references/crit.md` (locate it with Glob if needed):
+`skills/10x-designer/references/crit.md` (locate it with Glob if needed):
 
 1. Read the artifact(s) you were given, plus the brief if one exists. If no
    intent is stated, infer it, write it down, and critique against that.

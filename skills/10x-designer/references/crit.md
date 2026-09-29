@@ -53,7 +53,7 @@ edge cases, legal asks about data. Rehearse them.
 ## Crit page in Figma
 
 Asked for a crit *page* or *board* in Figma — or the team has a `crit-page`
-template registered in `.10xdesigner/config.md`'s Figma templates table?
+template registered in `.10x-designer/config.md`'s Figma templates table?
 Follow the instantiate flow in `templates.md`: duplicate the registered
 template into their file and fill it with the rounds and fix list from this
 workflow. No registered template → offer to build a simple crit frame

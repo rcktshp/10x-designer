@@ -1,10 +1,10 @@
-# 10xdesigner — repository guide for coding agents
+# 10x-designer — repository guide for coding agents
 
 This repository is a plugin, not an application: it is Markdown and JSON
 only, with no build, tests, or runtime. Everything an assistant executes
-comes from the `10xdesigner` skill.
+comes from the `10x-designer` skill.
 
-- `skills/10xdesigner/SKILL.md` — the skill: philosophy, routing table, and
+- `skills/10x-designer/SKILL.md` — the skill: philosophy, routing table, and
   universal rules. `references/` holds one file per workflow;
   `references/knowledge/` is the UX knowledge base (start at `INDEX.md`);
   `assets/templates/` holds the artifact templates.
@@ -25,7 +25,7 @@ are UTF-8 with no trailing whitespace.
 ## Every change ships with
 
 - A README update when anything user-visible changed: a workflow, a
-  template, an install step, a host. `docs/10xdesigner-overview.md` is the
+  template, an install step, a host. `docs/10x-designer-overview.md` is the
   long-form tour and needs the same edit.
 - A version bump in all four manifests (`.claude-plugin/plugin.json`,
   `.claude-plugin/marketplace.json`, `plugin.json`, `.codex-plugin/plugin.json`

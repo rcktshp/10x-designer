@@ -1,11 +1,11 @@
 {
-  "name": "10xdesigner",
+  "name": "10x-designer",
   "interface": {
-    "displayName": "10xDesigner"
+    "displayName": "10x-designer"
   },
   "plugins": [
     {
-      "name": "10xdesigner",
+      "name": "10x-designer",
       "source": {
         "source": "local",
         "path": "./"

@@ -17,7 +17,7 @@ element and comes with a direction, not just a verdict.
 This is a read-only review: do not edit, create, or delete files. Return
 your findings as a message.
 
-Load the `10xdesigner` skill and follow the crit workflow in its
+Load the `10x-designer` skill and follow the crit workflow in its
 `references/crit.md`:
 
 1. Read the artifact(s) you were given, plus the brief if one exists. If no
