@@ -74,7 +74,7 @@ The skill also triggers naturally without commands: "mock up a checkout flow",
 
 ## Install
 
-10x-designer ships in one repo for three hosts. The skill (workflows, knowledge
+10x-designer ships in one repo for every host. The skill (workflows, knowledge
 base, templates) is identical everywhere; only the entry points differ.
 
 **Claude Code**
@@ -98,6 +98,13 @@ You get the skill (triggers from plain conversation) and two custom agents:
 `10x-designer`, the front door that asks where to start, and `design-critic`.
 Copilot CLI has no user-defined slash commands, so pick the agent
 (`/agent`, or `copilot --agent 10x-designer`) or just describe the task.
+
+**GitHub Copilot app** (macOS, Windows, Linux)
+
+Same plugin, installed from the UI: **Customize** → **Plugins** → add the
+marketplace `rcktshp/10x-designer`, then install `10x-designer`. `/agent`
+selects the front door or the critic, and `/skills` lists the skill. VS
+Code's agent plugins read the same root `plugin.json`.
 
 **OpenAI Codex**
 
@@ -130,6 +137,7 @@ this repo is not an update. Hosts pull, nothing is pushed:
   Marketplaces and Claude Code refreshes it in the background.
 - **Copilot CLI:** `copilot plugin update 10x-designer` (or `--all`), or
   set `autoUpdate: true` on the marketplace entry in your user settings.
+  In the Copilot app, update from **Customize** → **Plugins**.
 - **Codex:** `codex plugin marketplace upgrade`, then re-add the plugin.
   Re-run `scripts/install-codex-prompts.sh` if you installed the prompts.
 

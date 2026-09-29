@@ -1,7 +1,8 @@
 # 10x-designer: an AI design toolkit for the whole product design lifecycle
 
 10x-designer is an open-source plugin that turns a coding agent — Claude
-Code, GitHub Copilot CLI, or OpenAI Codex — into a design teammate. It
+Code, GitHub Copilot (CLI, desktop app, or VS Code), or OpenAI Codex — into
+a design teammate. It
 covers the full arc of product design work: framing a problem, exploring
 structure, building something clickable, pressure-testing it with the
 stakeholders who will actually review it, and moving between Figma and code.
@@ -258,7 +259,7 @@ re-anchors.
 
 ## Install
 
-One repo serves three hosts. The skill — workflows, knowledge base,
+One repo serves every host. The skill — workflows, knowledge base,
 templates — is identical everywhere; only the entry points differ.
 
 ### Claude Code
@@ -284,6 +285,14 @@ agents: `10x-designer`, the front door that asks where to start, and
 `design-critic`. Copilot CLI has no user-defined slash commands, so select
 the agent (`/agent`, or `copilot --agent 10x-designer`) or just describe the
 task.
+
+### GitHub Copilot app
+
+The desktop app (macOS, Windows, Linux) installs the same plugin from its
+UI: **Customize** → **Plugins** → add the marketplace `rcktshp/10x-designer`
+→ install `10x-designer`. `/agent` selects the front door or the critic,
+`/skills` lists the skill, and Agent Finder (`/af`) can surface it too. VS
+Code's agent plugins read the same root `plugin.json`.
 
 ### OpenAI Codex
 
@@ -316,7 +325,8 @@ manifests, and that field is what your host compares.
 - **Claude Code:** `claude plugin update 10x-designer`, or enable
   auto-update for the marketplace under `/plugin` → Marketplaces.
 - **Copilot CLI:** `copilot plugin update 10x-designer`, or set
-  `autoUpdate: true` on the marketplace in your user settings.
+  `autoUpdate: true` on the marketplace in your user settings. In the
+  Copilot app, update from **Customize** → **Plugins**.
 - **Codex:** `codex plugin marketplace upgrade`, then re-add the plugin.
 
 ---

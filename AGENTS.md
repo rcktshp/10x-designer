@@ -14,7 +14,8 @@ comes from the `10x-designer` skill.
 - `agents/` — Claude Code subagents. `com.github.copilot/agents/` holds the
   GitHub Copilot versions, `com.openai.codex/agents/` the Codex version.
 - Manifests: `.claude-plugin/` (Claude Code), `plugin.json` (Agent Plugins
-  1.0, used by Copilot CLI and VS Code), `.codex-plugin/` (Codex).
+  1.0, used by Copilot CLI, the Copilot app, and VS Code), `.codex-plugin/`
+  (Codex).
   Marketplaces: `.claude-plugin/marketplace.json`,
   `.github/plugin/marketplace.json`, `.agents/plugins/marketplace.json`.
 
