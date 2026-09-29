@@ -10,7 +10,7 @@
       "name": "10x-designer",
       "source": "./",
       "description": "AI design toolkit for the full product design lifecycle: prototype, wireframe, design brief, sprint, project card, competitive teardown, multi-persona crit, heuristic eval, templates, and Design-to-Code (Figma bridge).",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": {
         "name": "Diego Martins",
         "url": "https://diegomartins.com"
