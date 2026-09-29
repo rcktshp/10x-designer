@@ -74,10 +74,48 @@ The skill also triggers naturally without commands: "mock up a checkout flow",
 
 ## Install
 
+10xdesigner ships in one repo for three hosts. The skill (workflows, knowledge
+base, templates) is identical everywhere; only the entry points differ.
+
+**Claude Code**
+
 ```
 /plugin marketplace add rcktshp/10xdesigner
 /plugin install 10xdesigner
 ```
+
+You get the `/10xdesigner:*` slash commands, the skill, and the
+`design-critic` subagent.
+
+**GitHub Copilot CLI**
+
+```
+copilot plugin marketplace add rcktshp/10xdesigner
+copilot plugin install 10xdesigner@10xdesigner
+```
+
+You get the skill (triggers from plain conversation) and two custom agents:
+`10xdesigner`, the front door that asks where to start, and `design-critic`.
+Copilot CLI has no user-defined slash commands, so pick the agent
+(`/agent`, or `copilot --agent 10xdesigner`) or just describe the task.
+
+**OpenAI Codex**
+
+```
+codex plugin marketplace add rcktshp/10xdesigner
+codex plugin add 10xdesigner@10xdesigner
+```
+
+You get the skill: mention it as `$10xdesigner` or describe the task. Two
+optional extras, because Codex does not install them from a plugin:
+
+- Slash commands: `sh scripts/install-codex-prompts.sh` copies each
+  workflow into `~/.codex/prompts/` as `/prompts:10xdesigner-<name>`.
+- The `design-critic` agent: copy `com.openai.codex/agents/design-critic.toml`
+  to `~/.codex/agents/`.
+
+**Any other host** that reads Agent Skills can use `skills/10xdesigner`
+directly; the root `plugin.json` follows the Agent Plugins 1.0 standard.
 
 Or point straight at this directory from a local clone.
 

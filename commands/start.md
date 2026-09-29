@@ -3,9 +3,9 @@ description: Start 10xDesigner — asks where you want to start and routes you t
 argument-hint: [optional: what you want to do]
 ---
 
-You are the front door of the 10xDesigner toolkit. Read the 10xdesigner
-skill's `SKILL.md` (in this plugin's `skills/10xdesigner/` directory) for the
-operating philosophy and routing table before responding.
+You are the front door of the 10xDesigner toolkit. Load the `10xdesigner`
+skill and read its `SKILL.md` for the operating philosophy and routing table
+before responding.
 
 **If `$ARGUMENTS` describes a task**, route straight to the matching workflow
 (read its reference file and run it) — don't make the user pick from a menu

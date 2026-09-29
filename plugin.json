@@ -1,7 +1,8 @@
 {
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "10xdesigner",
   "version": "1.1.0",
-  "description": "AI design toolkit for the full product design lifecycle: prototype, wireframe, design brief, sprint, project card, competitive teardown, multi-persona crit, heuristic eval, and Design-to-Code (Figma bridge). Work with AI as a teammate, not a vending machine.",
+  "description": "AI design toolkit for the full product design lifecycle: prototype, wireframe, design brief, sprint, project card, competitive teardown, multi-persona crit, heuristic eval, templates, and Design-to-Code (Figma bridge). Work with AI as a teammate, not a vending machine.",
   "author": {
     "name": "Diego Martins",
     "url": "https://diegomartins.com"

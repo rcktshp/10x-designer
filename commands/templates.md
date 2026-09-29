@@ -3,8 +3,7 @@ description: Start from a ready-made design artifact template (brief, card, one-
 argument-hint: [which template, and for what project]
 ---
 
-Read the 10xdesigner skill's `references/templates.md` (in this plugin's
-`skills/10xdesigner/` directory) and follow the Templates workflow for:
+Load the `10xdesigner` skill and read its `references/templates.md`, then follow the Templates workflow for:
 $ARGUMENTS
 
 If no argument was given, list the available templates from the library table
