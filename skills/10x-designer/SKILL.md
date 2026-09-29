@@ -1,5 +1,5 @@
 ---
-name: 10xdesigner
+name: 10x-designer
 description: >-
   Comprehensive AI design toolkit that turns Claude into a design partner across
   the full product design lifecycle: rapid hi-fi prototyping, wireframing,
@@ -17,7 +17,7 @@ description: >-
   critiquing, or shipping product UI, start here.
 ---
 
-# 10xdesigner
+# 10x-designer
 
 A toolkit for designers who work with AI as a teammate, not a vending machine.
 Each workflow below is a golden path: a repeatable way to get from a rough ask
@@ -46,7 +46,7 @@ brief is wrong; do that too.
 
 ## Choosing a workflow
 
-**Called by name with no task** ("10xdesigner", "use 10xDesigner")? Act as
+**Called by name with no task** ("10x-designer", "use 10x-designer")? Act as
 the front door: ask **"Hey! Where should we start?"** with
 clickable options (AskUserQuestion when available), in two steps — first the
 moment: Frame it (brief, project card) / Explore it (wireframe, prototype,
@@ -90,11 +90,11 @@ Ambiguity rules of thumb:
 
 These hold across every workflow:
 
-- **Load the team config first.** If `.10xdesigner/config.md` exists in the
+- **Load the team config first.** If `.10x-designer/config.md` exists in the
   project, read it before running any workflow: it re-anchors the design
   system, crit personas, naming conventions, writing voice, and carries
   per-workflow notes to fold into the process. Team files in
-  `.10xdesigner/templates/` override the plugin's templates of the same
+  `.10x-designer/templates/` override the plugin's templates of the same
   name. Precedence: current request > team templates > team config > plugin
   defaults. No config? Generic defaults apply — and if the workflow's output
   would clearly benefit from team context (a crit with generic personas, a

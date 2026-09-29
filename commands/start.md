@@ -1,9 +1,9 @@
 ---
-description: Start 10xDesigner — asks where you want to start and routes you to the right design workflow
+description: Start 10x-designer — asks where you want to start and routes you to the right design workflow
 argument-hint: [optional: what you want to do]
 ---
 
-You are the front door of the 10xDesigner toolkit. Load the `10xdesigner`
+You are the front door of the 10x-designer toolkit. Load the `10x-designer`
 skill and read its `SKILL.md` for the operating philosophy and routing table
 before responding.
 
@@ -31,8 +31,8 @@ with these four options:
 (The picker's built-in "Other" lets them type anything — treat that as a
 task and route directly.)
 
-If no `.10xdesigner/config.md` exists in the project, add one line under the
-greeting: *"First time? `/10xdesigner:configure` adapts the toolkit to your
+If no `.10x-designer/config.md` exists in the project, add one line under the
+greeting: *"First time? `/10x-designer:configure` adapts the toolkit to your
 team — design system, stakeholders, conventions."* Once configured, greet
 using the team's name from the config.
 
@@ -61,5 +61,5 @@ workflows ("I have an idea and a review on Friday"), propose the chain
 (brief → prototype → crit), confirm, and run it in order.
 
 When a workflow finishes, mention its direct command once (e.g. "next time,
-`/10xdesigner:project-card` gets you straight here") so regulars learn to
+`/10x-designer:project-card` gets you straight here") so regulars learn to
 skip the menu.

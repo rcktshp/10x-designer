@@ -1,6 +1,6 @@
-# 10xdesigner: an AI design toolkit for the whole product design lifecycle
+# 10x-designer: an AI design toolkit for the whole product design lifecycle
 
-10xdesigner is an open-source plugin that turns a coding agent — Claude
+10x-designer is an open-source plugin that turns a coding agent — Claude
 Code, GitHub Copilot CLI, or OpenAI Codex — into a design teammate. It
 covers the full arc of product design work: framing a problem, exploring
 structure, building something clickable, pressure-testing it with the
@@ -9,7 +9,7 @@ stakeholders who will actually review it, and moving between Figma and code.
 It is written entirely in Markdown. There is no server, no account, and
 nothing to build. Install it, ask *"where should we start?"*, and go.
 
-- Repo: <https://github.com/rcktshp/10xdesigner>
+- Repo: <https://github.com/rcktshp/10x-designer>
 - License: MIT
 - Author: [Diego Martins](https://diegomartins.com)
 
@@ -21,7 +21,7 @@ Most AI design tooling works like a vending machine. You compose the
 perfect prompt, press the button, and get one take-it-or-leave-it output.
 If it's wrong, you start over.
 
-10xdesigner is built on a different belief: **AI is a teammate.** A teammate
+10x-designer is built on a different belief: **AI is a teammate.** A teammate
 asks the one or two questions that actually change the work, restates the
 task before doing it, says what they assumed, offers real options at real
 decision points, and pushes back when the brief is wrong.
@@ -58,19 +58,19 @@ onboarding", "write a brief for search v2").
 
 | Workflow | Command | What you get |
 | --- | --- | --- |
-| Prototype | `/10xdesigner:prototype` | A single-file, interactive, hi-fi HTML prototype |
-| Wireframe | `/10xdesigner:wireframe` | Three structurally different lo-fi options with a recommendation |
-| Design Brief | `/10xdesigner:brief` | A review-grade problem-framing document |
-| Design Sprint | `/10xdesigner:sprint` | Map → sketch → decide → prototype → test kit, compressed |
-| Project Card | `/10xdesigner:project-card` | A design-review framing card, built in Figma |
-| Teardown | `/10xdesigner:teardown` | Competitive analysis that ends in steal / adapt / avoid |
-| Design Crit | `/10xdesigner:crit` | Multi-persona stakeholder feedback before the real review |
-| Design Eval | `/10xdesigner:design-eval` | Nielsen scorecard, cognitive walkthrough, accessibility check |
-| Templates | `/10xdesigner:templates` | Nine pre-filled artifact templates |
-| Design-to-Code | `/10xdesigner:design-to-code` | Figma ⇄ code bridge and drift audit |
+| Prototype | `/10x-designer:prototype` | A single-file, interactive, hi-fi HTML prototype |
+| Wireframe | `/10x-designer:wireframe` | Three structurally different lo-fi options with a recommendation |
+| Design Brief | `/10x-designer:brief` | A review-grade problem-framing document |
+| Design Sprint | `/10x-designer:sprint` | Map → sketch → decide → prototype → test kit, compressed |
+| Project Card | `/10x-designer:project-card` | A design-review framing card, built in Figma |
+| Teardown | `/10x-designer:teardown` | Competitive analysis that ends in steal / adapt / avoid |
+| Design Crit | `/10x-designer:crit` | Multi-persona stakeholder feedback before the real review |
+| Design Eval | `/10x-designer:design-eval` | Nielsen scorecard, cognitive walkthrough, accessibility check |
+| Templates | `/10x-designer:templates` | Nine pre-filled artifact templates |
+| Design-to-Code | `/10x-designer:design-to-code` | Figma ⇄ code bridge and drift audit |
 
-Plus **Configure** (`/10xdesigner:configure`), which adapts everything above
-to your team, and **Start** (`/10xdesigner:start`), the front door that
+Plus **Configure** (`/10x-designer:configure`), which adapts everything above
+to your team, and **Start** (`/10x-designer:start`), the front door that
 routes you to the right one.
 
 #### Prototype: rapid, hi-fi, interactive
@@ -232,8 +232,8 @@ The plugin is deliberately generic: no company branding, nothing
 proprietary. Configuration lives in *your* project, not in the plugin, so
 you never fork it.
 
-`/10xdesigner:configure` (or "configure 10xdesigner for my team") writes
-`.10xdesigner/config.md` into your repo. Commit it and the whole team
+`/10x-designer:configure` (or "configure 10x-designer for my team") writes
+`.10x-designer/config.md` into your repo. Commit it and the whole team
 shares it. It captures:
 
 - **Design system:** name, where tokens and components live in code and in
@@ -245,7 +245,7 @@ shares it. It captures:
 - **Per-workflow notes:** teach any workflow team-specific behavior ("our
   evals also check motion guidelines") without editing the plugin.
 
-Drop house versions of any template into `.10xdesigner/templates/` and they
+Drop house versions of any template into `.10x-designer/templates/` and they
 override the defaults. Share a Figma template link once ("this is our crit
 template") and it's registered; from then on, workflows that build that
 artifact in Figma duplicate and fill your template.
@@ -264,45 +264,45 @@ templates — is identical everywhere; only the entry points differ.
 ### Claude Code
 
 ```
-/plugin marketplace add rcktshp/10xdesigner
-/plugin install 10xdesigner
+/plugin marketplace add rcktshp/10x-designer
+/plugin install 10x-designer
 ```
 
-You get the `/10xdesigner:*` slash commands, the skill, and the
-`design-critic` subagent. `/10xdesigner:start` greets you with *"Hey! Where
+You get the `/10x-designer:*` slash commands, the skill, and the
+`design-critic` subagent. `/10x-designer:start` greets you with *"Hey! Where
 should we start?"* and clickable options.
 
 ### GitHub Copilot CLI
 
 ```
-copilot plugin marketplace add rcktshp/10xdesigner
-copilot plugin install 10xdesigner@10xdesigner
+copilot plugin marketplace add rcktshp/10x-designer
+copilot plugin install 10x-designer@10x-designer
 ```
 
 You get the skill (it triggers from plain conversation) and two custom
-agents: `10xdesigner`, the front door that asks where to start, and
+agents: `10x-designer`, the front door that asks where to start, and
 `design-critic`. Copilot CLI has no user-defined slash commands, so select
-the agent (`/agent`, or `copilot --agent 10xdesigner`) or just describe the
+the agent (`/agent`, or `copilot --agent 10x-designer`) or just describe the
 task.
 
 ### OpenAI Codex
 
 ```
-codex plugin marketplace add rcktshp/10xdesigner
-codex plugin add 10xdesigner@10xdesigner
+codex plugin marketplace add rcktshp/10x-designer
+codex plugin add 10x-designer@10x-designer
 ```
 
-You get the skill: mention it as `$10xdesigner` or describe the task. Two
+You get the skill: mention it as `$10x-designer` or describe the task. Two
 optional extras, because Codex does not install them from a plugin:
 
 - **Slash commands:** `sh scripts/install-codex-prompts.sh` copies each
-  workflow into `~/.codex/prompts/` as `/prompts:10xdesigner-<name>`.
+  workflow into `~/.codex/prompts/` as `/prompts:10x-designer-<name>`.
 - **The critic agent:** copy `com.openai.codex/agents/design-critic.toml`
   to `~/.codex/agents/`.
 
 ### Anything else
 
-Any host that reads Agent Skills can use `skills/10xdesigner` directly, and
+Any host that reads Agent Skills can use `skills/10x-designer` directly, and
 the root `plugin.json` follows the Agent Plugins 1.0 open standard.
 
 Optional on every host: connect the Figma MCP server for full project-card
@@ -313,9 +313,9 @@ and Design-to-Code fidelity. Everything else runs with core tools only.
 Hosts pull; nothing is pushed. Each release bumps the `version` field in the
 manifests, and that field is what your host compares.
 
-- **Claude Code:** `claude plugin update 10xdesigner`, or enable
+- **Claude Code:** `claude plugin update 10x-designer`, or enable
   auto-update for the marketplace under `/plugin` → Marketplaces.
-- **Copilot CLI:** `copilot plugin update 10xdesigner`, or set
+- **Copilot CLI:** `copilot plugin update 10x-designer`, or set
   `autoUpdate: true` on the marketplace in your user settings.
 - **Codex:** `codex plugin marketplace upgrade`, then re-add the plugin.
 
@@ -324,7 +324,7 @@ manifests, and that field is what your host compares.
 ## A first session
 
 ```
-you   › /10xdesigner:start
+you   › /10x-designer:start
 
 10xd  › Hey! Where should we start?
         🧭 Frame it · 🎨 Explore it · 🔍 Pressure-test it · 🚀 Ship it
@@ -346,7 +346,7 @@ you   › checkout-prototype-v2.html — my design director, the payments PM,
         ---
         Done: crit of checkout-prototype-v2 against the v1 brief
         Not done / assumed: no mobile pass; assumed guest checkout is out of scope
-        Next: fix the two blockers, then /10xdesigner:design-eval before Friday
+        Next: fix the two blockers, then /10x-designer:design-eval before Friday
 ```
 
 Some prompts that work without any command:
@@ -365,7 +365,7 @@ Some prompts that work without any command:
 ## Repository layout
 
 ```
-skills/10xdesigner/
+skills/10x-designer/
   SKILL.md                     the skill: philosophy, routing, universal rules
   references/<workflow>.md     one file per workflow
   references/knowledge/        the UX knowledge base, 14 clusters
@@ -383,7 +383,7 @@ The skill is the single source of truth; every host wrapper is thin.
 
 ## Contributing
 
-Team-specific behavior belongs in your `.10xdesigner/config.md`, not in a
+Team-specific behavior belongs in your `.10x-designer/config.md`, not in a
 fork. Improvements that would help every team — a sharper heuristic, a
 better template, a missing workflow — are welcome as pull requests. The
 repo's `AGENTS.md` explains the layout and the release checklist.

@@ -1,4 +1,4 @@
-# Configure — make 10xdesigner yours
+# Configure — make 10x-designer yours
 
 Goal: adapt the toolkit to a team without forking the plugin. The plugin
 stays generic; everything team-specific lives in a config the team owns,
@@ -7,9 +7,9 @@ workflow speaks their language from then on.
 
 ## How customization works
 
-Team context lives at **`.10xdesigner/config.md`** in the project root
+Team context lives at **`.10x-designer/config.md`** in the project root
 (committed to the team's repo, so the whole team shares it). Optionally,
-**`.10xdesigner/templates/`** holds team versions of any artifact template —
+**`.10x-designer/templates/`** holds team versions of any artifact template —
 same filenames as the plugin's `assets/templates/`; a team file always wins
 over the plugin's default.
 
@@ -36,11 +36,11 @@ defaults. Config never *removes* a capability; it re-skins and re-anchors.
    - Conventions: what a brief/card is called internally, required
      sections, where artifacts get filed, review cadence names.
    - Product context: the product, its users, the metrics that matter.
-3. **Write `.10xdesigner/config.md`**, show it, and point out the two or
+3. **Write `.10x-designer/config.md`**, show it, and point out the two or
    three defaults that changed most ("your crits will now include a Brand
    voice persona; briefs will use 'Design Doc' naming").
 4. **Offer template overrides** only if they mentioned having house formats:
-   copy the plugin template into `.10xdesigner/templates/<name>.md`, apply
+   copy the plugin template into `.10x-designer/templates/<name>.md`, apply
    their changes there.
 
 ### Registering a Figma template
@@ -69,12 +69,12 @@ upstream to the plugin repo instead.
 ## Precedence
 
 1. What the user says in the current request (always wins)
-2. `.10xdesigner/templates/<name>.md` (team template override)
-3. `.10xdesigner/config.md` (team context and per-workflow notes)
+2. `.10x-designer/templates/<name>.md` (team template override)
+3. `.10x-designer/config.md` (team context and per-workflow notes)
 4. Plugin defaults (generic)
 
 ## Deliverable
 
-- `.10xdesigner/config.md` created or updated (+ any template overrides)
+- `.10x-designer/config.md` created or updated (+ any template overrides)
 - In-chat: what changed and which workflows it affects, standard footer.
   "Next" is usually running a workflow to feel the difference.
